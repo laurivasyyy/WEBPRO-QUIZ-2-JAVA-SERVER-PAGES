@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title} + ' | TrendItAll'"></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body class="bg-gray-100 scrollbar-hide">
+<nav class="flex items-center justify-between bg-blue-900 px-1 sticky top-0 z-50">
+    <div class="flex items-center text-xl px-2 py-4 ml-8 text-white font-bold">
+        <a href="/" class="text-white mr-4">TrendItAll</a>
+    </div>
+    <div class="ml-auto flex items-center space-x-10 mr-8">
+    </div>
+</nav>
+<div class="flex justify-center items-center mt-24">
+    <div class="w-full max-w-md">
+        <h1 class="text-its text-3xl font-bold text-center mb-4 flex flex-col items-center justify-center">
+            Log in to TrendItAll
+        </h1>
+        <form action="/login" method="POST" class="bg-white shadow-md rounded-lg px-8 py-6 mb-4">
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="username">
+                    Username
+                </label>
+                <input
+                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="username" name="username" type="text" placeholder="Username" autofocus required>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="password">
+                    Password
+                </label>
+                <input
+                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="password" name="password" type="password" placeholder="Password" required>
+            </div>
+            <div class="flex items-center justify-between">
+                <button type="submit"
+                        class="mt-1 inline-flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-800 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600">
+                    Login
+                </button>
+            </div>
+            <div class="mt-2">
+                <span>Haven't registered yet? </span><a href="/signup" class="text-blue-800">Sign up</a>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
